@@ -10,4 +10,6 @@ Vagrant.configure("2") do |config|
         s.path = "provision/setup.sh"
     end
 
+    config.vm.define "erettsegikVM"
+
 end
