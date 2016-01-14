@@ -34,13 +34,10 @@ service nginx restart
 
 mysql -u root -p$MYSQL_PASS -e "create database erettsegik;"
 mysql -u root -p$MYSQL_PASS erettsegik < /var/www/src/schema.sql
-mysql -u root -p$MYSQL_PASS erettsegik -e "insert into users values(DEFAULT, 'root', 5, 'asd');"
 
 cd /tmp
 curl -sS https://getcomposer.org/installer | php
 mv /tmp/composer.phar /usr/local/bin/composer
-
-cp /var/www/provision/config/config.php /var/www/src/config.php
 
 cd /var/www/src
 composer install
