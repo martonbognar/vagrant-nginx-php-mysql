@@ -6,7 +6,6 @@
         git clone git@github.com:erettsegik/erettsegik-vagrant.git
 3. Clone the `erettsegik.hu` repo *inside* this one and rename it to `src`
 
-        git clone git@github.com:erettsegik/erettsegik.hu.git
-        mv erettsegik.hu src
+        git clone git@github.com:erettsegik/erettsegik.hu.git src
 4. `vagrant up` in the root folder of `erettsegik-vagrant`
 5. (Optional) Ask @mici- for a proper database dump
