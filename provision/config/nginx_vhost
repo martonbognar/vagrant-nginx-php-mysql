@@ -26,25 +26,8 @@ server {
 
     error_page 404 = /404/;
 
+    # This is an example rewrite rule
     # /search/xy/ -> ?p=search&term=xy
     rewrite ^/search/([^/.]+)/?$ /index.php?p=search&term=$1 last;
-
-    # /note/add/ -> ?p=note&action=add
-    rewrite ^/note/add/?$ /index.php?p=note&action=add last;
-
-    # /modification/add/4/ -> ?p=modification&action=add&id=4
-    rewrite ^/modification/add/([^/.]+)/?$ /index.php?p=modification&action=add&id=$1 last;
-
-    # /user/xy/ -> ?p=user&action=xy
-    rewrite ^/user/([^/.]+)/?$ /index.php?p=user&action=$1 last;
-
-    # /news/page/4/ -> ?p=news&page=4
-    rewrite ^/news/page/([^/.]+)/?$ /index.php?p=news&page=$1 last;
-
-    # /xy/4/ -> ?p=xy&id=4
-    rewrite ^/([^/.]+)/([^/.]+)/?$ /index.php?p=$1&id=$2 last;
-
-    # /xy/ -> ?p=xy
-    rewrite ^/([^/.]+)/?$ /index.php?p=$1 last;
 
 }

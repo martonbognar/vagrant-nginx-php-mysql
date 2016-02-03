@@ -1,4 +1,5 @@
 MYSQL_PASS=1234
+MYSQL_DB=lorem
 
 #!/bin/bash
 apt-get update
@@ -32,8 +33,8 @@ service php5-fpm restart
 service mysql restart
 service nginx restart
 
-mysql -u root -p$MYSQL_PASS -e "create database erettsegik;"
-mysql -u root -p$MYSQL_PASS erettsegik < /var/www/src/schema.sql
+mysql -u root -p$MYSQL_PASS -e "create database $MYSQL_DB;"
+mysql -u root -p$MYSQL_PASS $MYSQL_DB < /var/www/src/schema.sql
 
 cd /tmp
 curl -sS https://getcomposer.org/installer | php
